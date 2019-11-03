@@ -7,7 +7,7 @@ class Home extends React.Component{
         return(
             <Card>
                 <CardContent>
-                    Reat 및 블라블라 외치고 있는 어플리케이션
+                    아 진짜 안되네 기본 예제하는데 몇시간째냐 
                 </CardContent>
             </Card>
         );
