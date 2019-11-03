@@ -1,25 +1,25 @@
 'use strict'
-const path = require('path')
+const path = require('path');
 
-module.exports={
-    entry:{
+module.exports = {
+    entry: {
         main: ['./src/main.js']
     },
-    output:{
-        path : path.resolve(__dirname, './build'),
+    output: {
+        path: path.resolve(__dirname, './build'),
         filename: '[name].js'
     },
-    module:{
-        rules:[{
-            test:/\.js$/,
-            include:path.resolve(__dirname,'./src'),
+    module: {
+        rules: [{
+            test: /\.js$/,
+            include: path.resolve(__dirname, './src'),
             loaders: 'babel-loader'
         }]
     },
-    plugins:[],
-    devServer:{
+    plugins: [],
+    devServer: {
         contentBase: './public',
-        host : 'localhost',
+        host: 'localhost',
         port: 8080
     }
 }
