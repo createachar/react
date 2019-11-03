@@ -14,7 +14,7 @@ const styles = {
         flexGrow: 1,
     },
     menuButton: {
-      marginRight: 'auto'
+        marginRight: 'auto'
     },
 };
 
@@ -25,7 +25,7 @@ class AppShell extends React.Component {
             toggle: false
         };
     }
-    handleDrawerToggle = () => this.setState({toggle: !this.state.toggle})
+    handleDrawerToggle = () => this.setState({ toggle: !this.state.toggle })
     render() {
         const { classes } = this.props;
         return (
@@ -33,28 +33,29 @@ class AppShell extends React.Component {
                 <div className={classes.root}>
                     <AppBar position="static">
                         <IconButton className={classes.menuButton} color="inherit" onClick={this.handleDrawerToggle}>
-                            <MenuIcon/>
+                            <MenuIcon />
                         </IconButton>
                     </AppBar>
                     <Drawer open={this.state.toggle}>
+
                         <MenuItem onClick={this.handleDrawerToggle}>
                             <Link component={RouterLink} to="/">
-                                Home
+                                홈 화면
                             </Link>
                         </MenuItem>
                         <MenuItem onClick={this.handleDrawerToggle}>
                             <Link component={RouterLink} to="/texts">
-                                Texts
+                                텍스트 관리
                             </Link>
                         </MenuItem>
                         <MenuItem onClick={this.handleDrawerToggle}>
                             <Link component={RouterLink} to="/words">
-                                Words
+                                단어 관리
                             </Link>
                         </MenuItem>
                     </Drawer>
                 </div>
-                <div id="content" style={{margin: 'auto', marginTop: '20px'}}>
+                <div id="content" style={{ margin: 'auto', marginTop: '20px' }}>
                     {React.cloneElement(this.props.children)}
                 </div>
             </div>
